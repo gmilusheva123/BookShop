@@ -1,4 +1,5 @@
 ﻿using System;
+using Data;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,17 @@ namespace BookShop.Forms
         public Form2()
         {
             InitializeComponent();
+            //dgv_Books.DataSource = 
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

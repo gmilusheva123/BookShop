@@ -6,6 +6,10 @@ namespace Business.Buisness_Logic
     public class GenreBusiness
     {
         BookStoreContext bookStoreContext = new BookStoreContext();
+        public List<Genre> GetAllOrders()
+        {
+            return bookStoreContext.Genres.ToList();
+        }
         public Genre GetGenreByID(int id)
         {
             return bookStoreContext.Genres.Find(id);

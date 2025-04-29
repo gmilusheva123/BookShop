@@ -11,6 +11,10 @@ namespace Business.Buisness_Logick
     public class BookBusiness
     {
         BookStoreContext bookStoreContext = new BookStoreContext();
+        public List<Book> GetAllOrders()
+        {
+            return bookStoreContext.Books.ToList();
+        }
 
         public Book GetBookByID(int id)
         {
