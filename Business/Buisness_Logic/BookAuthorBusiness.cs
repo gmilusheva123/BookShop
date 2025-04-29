@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data;
+using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,29 @@ namespace Business.Buisness_Logick
 {
     public class BookAuthorBusiness
     {
+        BookStoreContext bookStoreContext = new BookStoreContext();
+        public BookAuthor GetBookAuthorByID(int id)
+        {
+            return bookStoreContext.BookAuthors.Find(id);
+        }
+        public string AddBookAuthor(BookAuthor bookAuthor)
+        {
+            bookStoreContext.BookAuthors.Add(bookAuthor);
+            bookStoreContext.SaveChanges();
+            return "You added BookAuthor.";
+        }
+        public string RemoveGenre(int id)
+        {
+            bookStoreContext.BookAuthors.Remove(GetBookAuthorByID(id));
+            bookStoreContext.SaveChanges();
+            return "BookAuthor is removed successfully.";
+        }
+        public string UpdateBookAuthor(BookAuthor bookAuthor)
+        {
+            BookAuthor bookAuthor2 = bookStoreContext.BookAuthors.Find(bookAuthor.BookID);
+            bookStoreContext.Entry(bookAuthor2).CurrentValues.SetValues(bookAuthor);
+            bookStoreContext.SaveChanges();
+            return $"BookAuthor has been updated successfully.";
+        }
     }
 }
