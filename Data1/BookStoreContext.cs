@@ -14,7 +14,7 @@ namespace Data
         public DbSet<BookAuthor> BookAuthors { get; set; }
         public DbSet<Genre> Genres { get; set; }
 
-        public BookStoreContext() : base("name = BookStoreContext")
+        public BookStoreContext() : base("name = BookShopContext")
         {
         }
         public BookStoreContext(System.Data.Common.DbConnection connectionString) : base(connectionString, true)

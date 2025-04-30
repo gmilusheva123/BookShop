@@ -16,7 +16,7 @@ namespace Business.Buisness_Logick
         {
             bookStoreContext = context;
         }
-        public List<Book> GetAllOrders()
+        public List<Book> GetAllBooks()
         {
             return bookStoreContext.Books.ToList();
         }

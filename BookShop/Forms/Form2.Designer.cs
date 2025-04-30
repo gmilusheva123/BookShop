@@ -36,7 +36,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_Books = new System.Windows.Forms.DataGridView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstbx_Genre = new System.Windows.Forms.ListBox();
+            this.btn_Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Books)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,13 +116,23 @@
             this.dgv_Books.Size = new System.Drawing.Size(488, 145);
             this.dgv_Books.TabIndex = 7;
             // 
-            // listBox1
+            // lstbx_Genre
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(133, 157);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 30);
-            this.listBox1.TabIndex = 8;
+            this.lstbx_Genre.FormattingEnabled = true;
+            this.lstbx_Genre.Location = new System.Drawing.Point(133, 157);
+            this.lstbx_Genre.Name = "lstbx_Genre";
+            this.lstbx_Genre.Size = new System.Drawing.Size(120, 30);
+            this.lstbx_Genre.TabIndex = 8;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Location = new System.Drawing.Point(412, 157);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(98, 30);
+            this.btn_Add.TabIndex = 9;
+            this.btn_Add.Text = "Добави";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // Form2
             // 
@@ -129,7 +140,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(573, 411);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.lstbx_Genre);
             this.Controls.Add(this.dgv_Books);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv_Books;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstbx_Genre;
+        private System.Windows.Forms.Button btn_Add;
     }
 }

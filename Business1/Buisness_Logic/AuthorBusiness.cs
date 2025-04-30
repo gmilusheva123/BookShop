@@ -11,7 +11,11 @@ namespace Business.Buisness_Logick
     public class AuthorBusiness
     {
         BookStoreContext bookStoreContext = new BookStoreContext();
-        public List<Author> GetAllOrders()
+        public AuthorBusiness(BookStoreContext context)
+        {
+            bookStoreContext = context;
+        }
+        public List<Author> GetAllAuthors()
         {
             return bookStoreContext.Authors.ToList();
         }

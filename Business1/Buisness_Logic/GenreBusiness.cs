@@ -8,7 +8,11 @@ namespace Business.Buisness_Logic
     public class GenreBusiness
     {
         BookStoreContext bookStoreContext = new BookStoreContext();
-        public List<Genre> GetAllOrders()
+        public GenreBusiness(BookStoreContext context)
+        {
+            bookStoreContext = context;
+        }
+        public List<Genre> GetAllGenres()
         {
             return bookStoreContext.Genres.ToList();
         }
