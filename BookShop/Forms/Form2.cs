@@ -22,7 +22,6 @@ namespace BookShop.Forms
         public Form2()
         {
             InitializeComponent();
-            //dgv_Books.DataSource = 
         }
 
         private void Form2_Load(object sender, EventArgs e)
