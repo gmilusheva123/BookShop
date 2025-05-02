@@ -30,6 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbx_Genre = new System.Windows.Forms.TextBox();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.dgv_Genres = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Genres)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -46,11 +51,52 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Small", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(83, 113);
+            this.label2.Location = new System.Drawing.Point(42, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Жанр:";
+            // 
+            // tbx_Genre
+            // 
+            this.tbx_Genre.Location = new System.Drawing.Point(113, 130);
+            this.tbx_Genre.Multiline = true;
+            this.tbx_Genre.Name = "tbx_Genre";
+            this.tbx_Genre.Size = new System.Drawing.Size(267, 26);
+            this.tbx_Genre.TabIndex = 5;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.BackColor = System.Drawing.Color.PapayaWhip;
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Add.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_Add.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Add.Location = new System.Drawing.Point(436, 130);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(98, 30);
+            this.btn_Add.TabIndex = 10;
+            this.btn_Add.Text = "Добави";
+            this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
+            // dgv_Genres
+            // 
+            this.dgv_Genres.BackgroundColor = System.Drawing.Color.PapayaWhip;
+            this.dgv_Genres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Genres.Location = new System.Drawing.Point(46, 241);
+            this.dgv_Genres.Name = "dgv_Genres";
+            this.dgv_Genres.Size = new System.Drawing.Size(488, 145);
+            this.dgv_Genres.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sitka Small", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(182, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(217, 31);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Списък с жанрове";
             // 
             // Form4
             // 
@@ -58,10 +104,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(573, 411);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dgv_Genres);
+            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.tbx_Genre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form4";
             this.Text = "Genres";
+            this.Load += new System.EventHandler(this.tbx_Genre_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Genres)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,5 +123,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbx_Genre;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.DataGridView dgv_Genres;
+        private System.Windows.Forms.Label label5;
     }
 }

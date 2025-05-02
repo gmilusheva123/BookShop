@@ -32,7 +32,7 @@
             this.btn_Book = new System.Windows.Forms.Button();
             this.btn_Author = new System.Windows.Forms.Button();
             this.btn_Genre = new System.Windows.Forms.Button();
-            this.btn_BookAuthor = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -86,26 +86,25 @@
             this.btn_Genre.UseVisualStyleBackColor = false;
             this.btn_Genre.Click += new System.EventHandler(this.btn_Genre_Click);
             // 
-            // btn_BookAuthor
+            // button1
             // 
-            this.btn_BookAuthor.BackColor = System.Drawing.Color.PapayaWhip;
-            this.btn_BookAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_BookAuthor.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_BookAuthor.Location = new System.Drawing.Point(78, 308);
-            this.btn_BookAuthor.Name = "btn_BookAuthor";
-            this.btn_BookAuthor.Size = new System.Drawing.Size(164, 45);
-            this.btn_BookAuthor.TabIndex = 4;
-            this.btn_BookAuthor.Text = "Книги и автори";
-            this.btn_BookAuthor.UseVisualStyleBackColor = false;
-            this.btn_BookAuthor.Click += new System.EventHandler(this.btn_BookAuthor_Click);
+            this.button1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(78, 309);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 45);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Заявки\r\n";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(317, 377);
-            this.Controls.Add(this.btn_BookAuthor);
+            this.ClientSize = new System.Drawing.Size(317, 382);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Genre);
             this.Controls.Add(this.btn_Author);
             this.Controls.Add(this.btn_Book);
@@ -123,7 +122,7 @@
         private System.Windows.Forms.Button btn_Book;
         private System.Windows.Forms.Button btn_Author;
         private System.Windows.Forms.Button btn_Genre;
-        private System.Windows.Forms.Button btn_BookAuthor;
+        private System.Windows.Forms.Button button1;
     }
 }
 

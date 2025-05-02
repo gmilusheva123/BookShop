@@ -122,6 +122,7 @@
             this.dgv_Authors.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgv_Authors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Authors.Location = new System.Drawing.Point(41, 263);
+            this.dgv_Authors.MultiSelect = false;
             this.dgv_Authors.Name = "dgv_Authors";
             this.dgv_Authors.Size = new System.Drawing.Size(488, 129);
             this.dgv_Authors.TabIndex = 9;
@@ -138,6 +139,7 @@
             this.btn_Add.TabIndex = 10;
             this.btn_Add.Text = "Добави";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Delete
             // 
@@ -145,12 +147,13 @@
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Delete.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Delete.Location = new System.Drawing.Point(237, 188);
+            this.btn_Delete.Location = new System.Drawing.Point(241, 188);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(98, 30);
             this.btn_Delete.TabIndex = 11;
             this.btn_Delete.Text = "Изтрий";
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Update
             // 
@@ -164,6 +167,7 @@
             this.btn_Update.TabIndex = 12;
             this.btn_Update.Text = "Обнови";
             this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // Form3
             // 

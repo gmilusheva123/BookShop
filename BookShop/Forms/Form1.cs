@@ -20,30 +20,26 @@ namespace BookShop
 
         private void btn_Book_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 admin = new Form2();
+            admin.Show();
+            admin.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
-            form2.Show();
         }
 
         private void btn_Author_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Form3 admin = new Form3();
+            admin.Show();
+            admin.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
-            form3.Show();
         }
 
         private void btn_Genre_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
-            this.Hide(); 
-            form4.Show();
-        }
-
-        private void btn_BookAuthor_Click(object sender, EventArgs e)
-        {
-            Form5 form5 = new Form5();
+            Form4 admin = new Form4();
+            admin.Show();
+            admin.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
-            form5.Show();
         }
     }
 }

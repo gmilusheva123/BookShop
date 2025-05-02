@@ -16,6 +16,10 @@ namespace Business.Buisness_Logick
         {
             bookStoreContext = context;
         }
+        public Book GetBookByName(string name)
+        {
+            return bookStoreContext.Books.FirstOrDefault(g => g.Title == name);
+        }
         public List<Book> GetAllBooks()
         {
             return bookStoreContext.Books.ToList();

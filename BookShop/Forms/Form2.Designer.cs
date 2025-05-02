@@ -36,10 +36,12 @@
             this.tbx_Price = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_Books = new System.Windows.Forms.DataGridView();
-            this.lstbx_Genre = new System.Windows.Forms.ListBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.cbx_Genre = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbx_Author = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Books)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +105,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Small", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(186, 193);
+            this.label5.Location = new System.Drawing.Point(189, 231);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(184, 31);
             this.label5.TabIndex = 6;
@@ -114,18 +116,10 @@
             // 
             this.dgv_Books.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgv_Books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Books.Location = new System.Drawing.Point(42, 242);
+            this.dgv_Books.Location = new System.Drawing.Point(42, 281);
             this.dgv_Books.Name = "dgv_Books";
             this.dgv_Books.Size = new System.Drawing.Size(488, 145);
             this.dgv_Books.TabIndex = 7;
-            // 
-            // lstbx_Genre
-            // 
-            this.lstbx_Genre.FormattingEnabled = true;
-            this.lstbx_Genre.Location = new System.Drawing.Point(109, 148);
-            this.lstbx_Genre.Name = "lstbx_Genre";
-            this.lstbx_Genre.Size = new System.Drawing.Size(120, 30);
-            this.lstbx_Genre.TabIndex = 8;
             // 
             // btn_Add
             // 
@@ -133,7 +127,7 @@
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Add.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Add.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Add.Location = new System.Drawing.Point(259, 148);
+            this.btn_Add.Location = new System.Drawing.Point(260, 180);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(98, 30);
             this.btn_Add.TabIndex = 9;
@@ -147,7 +141,7 @@
             this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Update.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Update.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Update.Location = new System.Drawing.Point(467, 148);
+            this.btn_Update.Location = new System.Drawing.Point(468, 180);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(98, 30);
             this.btn_Update.TabIndex = 10;
@@ -160,23 +154,51 @@
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Delete.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Delete.Location = new System.Drawing.Point(363, 148);
+            this.btn_Delete.Location = new System.Drawing.Point(364, 180);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(98, 30);
             this.btn_Delete.TabIndex = 11;
             this.btn_Delete.Text = "Изтрий";
             this.btn_Delete.UseVisualStyleBackColor = false;
             // 
+            // cbx_Genre
+            // 
+            this.cbx_Genre.FormattingEnabled = true;
+            this.cbx_Genre.Location = new System.Drawing.Point(109, 151);
+            this.cbx_Genre.Name = "cbx_Genre";
+            this.cbx_Genre.Size = new System.Drawing.Size(132, 21);
+            this.cbx_Genre.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Sitka Small", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(38, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 24);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Автор:";
+            // 
+            // cbx_Author
+            // 
+            this.cbx_Author.FormattingEnabled = true;
+            this.cbx_Author.Location = new System.Drawing.Point(118, 188);
+            this.cbx_Author.Name = "cbx_Author";
+            this.cbx_Author.Size = new System.Drawing.Size(132, 21);
+            this.cbx_Author.TabIndex = 14;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(573, 411);
+            this.ClientSize = new System.Drawing.Size(573, 438);
+            this.Controls.Add(this.cbx_Author);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbx_Genre);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.lstbx_Genre);
             this.Controls.Add(this.dgv_Books);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbx_Price);
@@ -204,9 +226,11 @@
         private System.Windows.Forms.TextBox tbx_Price;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv_Books;
-        private System.Windows.Forms.ListBox lstbx_Genre;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.ComboBox cbx_Genre;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbx_Author;
     }
 }

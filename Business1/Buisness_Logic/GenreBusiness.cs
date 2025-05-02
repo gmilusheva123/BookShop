@@ -16,6 +16,10 @@ namespace Business.Buisness_Logic
         {
             return bookStoreContext.Genres.ToList();
         }
+        public Genre GetGenreByName(string name)
+        {
+            return bookStoreContext.Genres.FirstOrDefault(g => g.Name == name);
+        }
         public Genre GetGenreByID(int id)
         {
             return bookStoreContext.Genres.Find(id);
