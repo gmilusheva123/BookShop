@@ -41,5 +41,13 @@ namespace BookShop
             admin.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form6 admin = new Form6();
+            admin.Show();
+            admin.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
+        }
     }
 }

@@ -37,5 +37,23 @@ namespace BookShop.Forms
             MessageBox.Show(messege);
             dgv_Genres.DataSource = genreBusiness.GetAllGenres();
         }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            Genre removedGenre = dgv_Genres.CurrentRow.DataBoundItem as Genre;
+            string message = genreBusiness.RemoveGenre(removedGenre.GenreID);
+            MessageBox.Show(message);
+            dgv_Genres.DataSource = genreBusiness.GetAllGenres();
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            Genre updatedGenre = dgv_Genres.CurrentRow.DataBoundItem as Genre;
+            string genre = tbx_Genre.Text;
+            updatedGenre.Name = genre;
+            string messege = genreBusiness.UpdateGenre(updatedGenre);
+            MessageBox.Show(messege);
+            dgv_Genres.DataSource = genreBusiness.GetAllGenres();
+        }
     }
 }

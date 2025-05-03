@@ -71,6 +71,7 @@
             this.btn_OutputQuery1.TabIndex = 11;
             this.btn_OutputQuery1.Text = "Изведи";
             this.btn_OutputQuery1.UseVisualStyleBackColor = false;
+            this.btn_OutputQuery1.Click += new System.EventHandler(this.btn_OutputQuery1_Click);
             // 
             // label1
             // 
@@ -94,6 +95,7 @@
             this.btn_Query2.TabIndex = 13;
             this.btn_Query2.Text = "Изведи";
             this.btn_Query2.UseVisualStyleBackColor = false;
+            this.btn_Query2.Click += new System.EventHandler(this.btn_Query2_Click);
             // 
             // label3
             // 
@@ -125,6 +127,7 @@
             this.btn_Query3.TabIndex = 16;
             this.btn_Query3.Text = "Изведи";
             this.btn_Query3.UseVisualStyleBackColor = false;
+            this.btn_Query3.Click += new System.EventHandler(this.btn_Query3_Click);
             // 
             // label4
             // 
@@ -163,6 +166,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Form6";
             this.Text = "Query";
+            this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Query)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
