@@ -11,6 +11,7 @@ namespace BookShop.Forms
 {
     public partial class Form6 : Form
     {
+        
         BookStoreContext context = new BookStoreContext();
         BookBusiness bookBusiness => new BookBusiness(context);
         AuthorBusiness authorBusiness => new AuthorBusiness(context);
@@ -24,24 +25,25 @@ namespace BookShop.Forms
 
         private void btn_OutputQuery1_Click(object sender, EventArgs e)
         {
-            //if (cbx_Query1.SelectedItem is Auth selectedAuthor)
-            //{
-            //    var books = context.BookAuthors
-            //        .Where(ba => ba.AuthorID == selectedAuthor.AuthorID)
-            //        .Select(ba => new
-            //        {
-            //            Заглавие = ba.Book.Title
-            //        })
-            //        .ToList();
 
-            //    dgv_Query.DataSource = books;
-            //}
+            Author selectedAuthor = authorBusiness
+                .GetAuthorByName(cbx_Query1.SelectedItem.ToString());
+            var books = context.BookAuthors
+                    .Where(ba => ba.AuthorID == selectedAuthor.AuthorID)
+                    .Select(ba => new
+                    {
+                        Заглавие = ba.Book.Title
+                    })
+                    .ToList();
+
+                dgv_Query.DataSource = books;
+            
         }
 
         private void Form6_Load(object sender, EventArgs e)
         {
-            cbx_Query1.DataSource = authorBusiness.GetAllAuthors();
-            cbx_GenreQuery3.DataSource = genreBusiness.GetAllGenres();
+            cbx_Query1.DataSource = authorBusiness.GetAllAuthors().Select(a=>a.FirstName+" "+a.LastName).ToList();
+            cbx_GenreQuery3.DataSource = genreBusiness.GetAllGenres().Select(g=>g.Name).ToList();
         }
 
         private void btn_Query2_Click(object sender, EventArgs e)
@@ -60,9 +62,8 @@ namespace BookShop.Forms
 
         private void btn_Query3_Click(object sender, EventArgs e)
         {
-            if (cbx_GenreQuery3.SelectedItem is Genre selectedGenre)
-            {
-                var books = context.Books
+            Genre selectedGenre = genreBusiness.GetGenreByName(cbx_GenreQuery3.SelectedItem.ToString());
+            var books = context.Books
                     .Where(b => b.GenreID == selectedGenre.GenreID)
                     .Select(b => new
                     {
@@ -72,7 +73,7 @@ namespace BookShop.Forms
                     })
                     .ToList();
                 dgv_Query.DataSource = books;
-            }
+            
         }
     }
 }

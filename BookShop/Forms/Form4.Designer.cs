@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Small", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(215, 32);
+            this.label1.Location = new System.Drawing.Point(209, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 40);
             this.label1.TabIndex = 2;
@@ -73,7 +73,7 @@
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Add.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Add.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Add.Location = new System.Drawing.Point(124, 159);
+            this.btn_Add.Location = new System.Drawing.Point(110, 159);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(98, 30);
             this.btn_Add.TabIndex = 10;
@@ -85,7 +85,7 @@
             // 
             this.dgv_Genres.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgv_Genres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Genres.Location = new System.Drawing.Point(46, 241);
+            this.dgv_Genres.Location = new System.Drawing.Point(41, 241);
             this.dgv_Genres.Name = "dgv_Genres";
             this.dgv_Genres.Size = new System.Drawing.Size(488, 145);
             this.dgv_Genres.TabIndex = 11;
@@ -94,7 +94,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Small", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(182, 192);
+            this.label5.Location = new System.Drawing.Point(182, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(217, 31);
             this.label5.TabIndex = 12;
@@ -106,7 +106,7 @@
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Delete.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Delete.Location = new System.Drawing.Point(242, 159);
+            this.btn_Delete.Location = new System.Drawing.Point(237, 159);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(98, 30);
             this.btn_Delete.TabIndex = 13;

@@ -15,9 +15,12 @@ namespace Business.Buisness_Logick
         {
             bookStoreContext = context;
         }
-        public Author GetGenreByName(string firstname, string lastname)
+        public Author GetAuthorByName(string fullName)
         {
-            return bookStoreContext.Authors.FirstOrDefault(g => g.FirstName == firstname && g.LastName == lastname);
+            string[] names = fullName.Split(' ');
+            string firstName = names[0];
+            string secondName = names[1];
+            return bookStoreContext.Authors.FirstOrDefault(g => g.FirstName == firstName && g.LastName == secondName);
         }
         public List<Author> GetAllAuthors()
         {
