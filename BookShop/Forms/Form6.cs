@@ -40,14 +40,8 @@ namespace BookShop.Forms
 
         private void Form6_Load(object sender, EventArgs e)
         {
-            //var authors = context.Authors
-            //                     .OrderBy(a => a.FirstName)
-            //                     .ThenBy(a => a.LastName)
-            //                     .ToList();
-
-            //cbx_Query1.DataSource = authors;
-            //cbx_Query1.DisplayMember = "FullName";
-            //cbx_Query1.ValueMember = "Id";
+            cbx_Query1.DataSource = authorBusiness.GetAllAuthors();
+            cbx_GenreQuery3.DataSource = genreBusiness.GetAllGenres();
         }
 
         private void btn_Query2_Click(object sender, EventArgs e)
@@ -68,18 +62,17 @@ namespace BookShop.Forms
         {
             if (cbx_GenreQuery3.SelectedItem is Genre selectedGenre)
             {
-                    var books = context.Books
-                        .Where(b => b.GenreID == selectedGenre.GenreID)
-                        .Select(b => new
-                        {
-                            Заглавие = b.Title,
-                            Цена = b.Price,
-                            Жанр = b.Genre.Name
-                        })
-                        .ToList();
-
-                    dgv_Query.DataSource = books;
-                }
+                var books = context.Books
+                    .Where(b => b.GenreID == selectedGenre.GenreID)
+                    .Select(b => new
+                    {
+                        Заглавие = b.Title,
+                        Цена = b.Price,
+                        Жанр = b.Genre.Name
+                    })
+                    .ToList();
+                dgv_Query.DataSource = books;
             }
         }
     }
+}
