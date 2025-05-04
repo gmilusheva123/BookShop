@@ -27,6 +27,11 @@ namespace BookShop.Forms
         {
             dgv_Authors.DataSource = authorBusiness.GetAllAuthors();
         }
+        /// <summary>
+        /// Adds an author.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
@@ -41,7 +46,11 @@ namespace BookShop.Forms
             MessageBox.Show(message);
             dgv_Authors.DataSource = authorBusiness.GetAllAuthors();
         }
-
+        /// <summary>
+        /// Deletes the selected author.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             Author removedAuthor = dgv_Authors.CurrentRow.DataBoundItem as Author;
@@ -49,7 +58,11 @@ namespace BookShop.Forms
             MessageBox.Show(message);
             dgv_Authors.DataSource = authorBusiness.GetAllAuthors();
         }
-
+        /// <summary>
+        /// Updates the parameters of the selected author.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Update_Click(object sender, EventArgs e)
         {
             Author updatedAuthor = dgv_Authors.CurrentRow.DataBoundItem as Author;
