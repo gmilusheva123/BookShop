@@ -37,7 +37,7 @@ namespace BookShop.Forms
             //    {
             //        Title = item.Title,
             //        Price = item.Price,
-            //        Genre = item.Se.Name,
+            //        Genre = item.Genre.Name,
             //        Author = item.BookAuthors.FirstOrDefault().Author.FirstName + " " + item.BookAuthors.FirstOrDefault().Author.LastName
             //    };
             //    viewBooks.Add(viewBook);
@@ -77,6 +77,8 @@ namespace BookShop.Forms
                 Author = author
             };
             bookAuthorBusiness.AddBookAuthor(bookAuthor);
+            book.BookAuthors.Add(bookAuthor);
+            bookBusiness.UpdateBook(book);
             //string authorName = book.BookAuthors.First(ba => ba.BookID == book.BookID).Author.FirstName + " " + book.BookAuthors.First(ba => ba.BookID == book.BookID).Author.LastName;
             //viewBooks.Add(new ViewBook()
             //{
@@ -104,7 +106,9 @@ namespace BookShop.Forms
                 BookID = book.BookID,
                 Title = tbx_Title.Text,
                 Price = decimal.Parse(tbx_Price.Text),
-                GenreID = genreBusiness.GetGenreByName(cbx_Genre.SelectedItem.ToString()).GenreID
+                GenreID = genreBusiness.GetGenreByName(cbx_Genre.SelectedItem.ToString()).GenreID,
+                Genre = book.Genre,
+                BookAuthors = book.BookAuthors
             };
             bookBusiness.UpdateBook(bookToUpdate);
             dgv_Books.DataSource = null;
