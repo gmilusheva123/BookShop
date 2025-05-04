@@ -88,10 +88,27 @@ namespace BookShop.Forms
             dgv_Books.DataSource = null;
             dgv_Books.DataSource = bookBusiness.GetAllBooks();
         }
-
-        private void btn_Delete_Click(object sender, EventArgs e)
+        private void btn_Delete_Click_1(object sender, EventArgs e)
         {
+            Book book = dgv_Books.CurrentRow.DataBoundItem as Book;
+            bookBusiness.RemoveBook(book.BookID);
+            dgv_Books.DataSource = null;
+            dgv_Books.DataSource = bookBusiness.GetAllBooks();
+        }
 
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            Book book = dgv_Books.CurrentRow.DataBoundItem as Book;
+            Book bookToUpdate = new Book()
+            {
+                BookID = book.BookID,
+                Title = tbx_Title.Text,
+                Price = decimal.Parse(tbx_Price.Text),
+                GenreID = genreBusiness.GetGenreByName(cbx_Genre.SelectedItem.ToString()).GenreID
+            };
+            bookBusiness.UpdateBook(bookToUpdate);
+            dgv_Books.DataSource = null;
+            dgv_Books.DataSource = bookBusiness.GetAllBooks();
         }
     }
 }

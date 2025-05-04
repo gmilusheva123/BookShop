@@ -147,6 +147,7 @@
             this.btn_Update.TabIndex = 10;
             this.btn_Update.Text = "Обнови";
             this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btn_Delete
             // 
@@ -160,6 +161,7 @@
             this.btn_Delete.TabIndex = 11;
             this.btn_Delete.Text = "Изтрий";
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click_1);
             // 
             // cbx_Genre
             // 
