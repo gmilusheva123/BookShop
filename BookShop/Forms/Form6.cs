@@ -22,7 +22,11 @@ namespace BookShop.Forms
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Prints all books from the seleted author.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_OutputQuery1_Click(object sender, EventArgs e)
         {
 
@@ -45,6 +49,11 @@ namespace BookShop.Forms
             cbx_Query1.DataSource = authorBusiness.GetAllAuthors().Select(a=>a.FirstName+" "+a.LastName).ToList();
             cbx_GenreQuery3.DataSource = genreBusiness.GetAllGenres().Select(g=>g.Name).ToList();
         }
+        /// <summary>
+        /// Prints all the book that are more expensive than 10 leva.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void btn_Query2_Click(object sender, EventArgs e)
         {
@@ -59,7 +68,11 @@ namespace BookShop.Forms
 
             dgv_Query.DataSource = books;
         }
-
+        /// <summary>
+        /// Prints all books from the selected genre.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Query3_Click(object sender, EventArgs e)
         {
             Genre selectedGenre = genreBusiness.GetGenreByName(cbx_GenreQuery3.SelectedItem.ToString());

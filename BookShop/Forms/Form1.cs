@@ -17,7 +17,11 @@ namespace BookShop
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Creates a new Form, opens it and hides the previous one.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Book_Click(object sender, EventArgs e)
         {
             Form2 admin = new Form2();
@@ -25,7 +29,11 @@ namespace BookShop
             admin.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
-
+        /// <summary>
+        /// Creates a new Form, opens it and hides the previous one.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Author_Click(object sender, EventArgs e)
         {
             Form3 admin = new Form3();
@@ -33,7 +41,11 @@ namespace BookShop
             admin.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
-
+        /// <summary>
+        /// Creates a new Form, opens it and hides the previous one.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Genre_Click(object sender, EventArgs e)
         {
             Form4 admin = new Form4();
@@ -41,7 +53,11 @@ namespace BookShop
             admin.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
-
+        /// <summary>
+        /// Creates a new Form, opens it and hides the previous one.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Form6 admin = new Form6();

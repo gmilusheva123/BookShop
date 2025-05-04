@@ -53,6 +53,12 @@ namespace BookShop.Forms
 
         }
 
+        /// <summary>
+        /// Button Add adds a book to the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
             string title = tbx_Title.Text;
@@ -76,7 +82,8 @@ namespace BookShop.Forms
                 Book = book,
                 Author = author
             };
-            bookAuthorBusiness.AddBookAuthor(bookAuthor);
+            string message = bookAuthorBusiness.AddBookAuthor(bookAuthor);
+            MessageBox.Show(message);
             book.BookAuthors.Add(bookAuthor);
             bookBusiness.UpdateBook(book);
             //string authorName = book.BookAuthors.First(ba => ba.BookID == book.BookID).Author.FirstName + " " + book.BookAuthors.First(ba => ba.BookID == book.BookID).Author.LastName;
@@ -90,14 +97,24 @@ namespace BookShop.Forms
             dgv_Books.DataSource = null;
             dgv_Books.DataSource = bookBusiness.GetAllBooks();
         }
+        /// <summary>
+        /// Button delete removes a book from the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Delete_Click_1(object sender, EventArgs e)
         {
             Book book = dgv_Books.CurrentRow.DataBoundItem as Book;
-            bookBusiness.RemoveBook(book.BookID);
+            string message = bookBusiness.RemoveBook(book.BookID);
+            MessageBox.Show(message);
             dgv_Books.DataSource = null;
             dgv_Books.DataSource = bookBusiness.GetAllBooks();
         }
-
+        /// <summary>
+        /// Button update updates the parameters for the selected book.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Update_Click(object sender, EventArgs e)
         {
             Book book = dgv_Books.CurrentRow.DataBoundItem as Book;
@@ -110,7 +127,8 @@ namespace BookShop.Forms
                 Genre = book.Genre,
                 BookAuthors = book.BookAuthors
             };
-            bookBusiness.UpdateBook(bookToUpdate);
+            string message = bookBusiness.UpdateBook(bookToUpdate);
+            MessageBox.Show(message);   
             dgv_Books.DataSource = null;
             dgv_Books.DataSource = bookBusiness.GetAllBooks();
         }

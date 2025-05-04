@@ -14,9 +14,6 @@ using System.Windows.Forms;
 
 namespace BookShop.Forms
 {
-    //искам да попитам, правя един курсов трислоен проект на тема BookShop на
-    //c# WindowsFormApp и ми трябва помощ с дизайна на формите,
-    //като имам таблици за Жанр, Автор, Книга и Кинга и Автор
     public partial class Form4 : Form
     {
         BookStoreContext context = new BookStoreContext();
