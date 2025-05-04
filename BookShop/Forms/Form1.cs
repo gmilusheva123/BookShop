@@ -20,14 +20,13 @@ namespace BookShop
         /// <summary>
         /// Creates a new Form, opens it and hides the previous one.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">  </param>
+        /// <param name="e">  </param>
         private void btn_Book_Click(object sender, EventArgs e)
         {
             Form2 admin = new Form2();
-            admin.Show();
-            admin.FormClosing += (obj, args) => { this.Close(); };
-            this.Hide();
+            admin.ShowDialog();
+           
         }
         /// <summary>
         /// Creates a new Form, opens it and hides the previous one.
@@ -37,9 +36,8 @@ namespace BookShop
         private void btn_Author_Click(object sender, EventArgs e)
         {
             Form3 admin = new Form3();
-            admin.Show();
-            admin.FormClosing += (obj, args) => { this.Close(); };
-            this.Hide();
+            admin.ShowDialog();
+            
         }
         /// <summary>
         /// Creates a new Form, opens it and hides the previous one.
@@ -49,9 +47,7 @@ namespace BookShop
         private void btn_Genre_Click(object sender, EventArgs e)
         {
             Form4 admin = new Form4();
-            admin.Show();
-            admin.FormClosing += (obj, args) => { this.Close(); };
-            this.Hide();
+            admin.ShowDialog();
         }
         /// <summary>
         /// Creates a new Form, opens it and hides the previous one.
@@ -61,9 +57,7 @@ namespace BookShop
         private void button1_Click(object sender, EventArgs e)
         {
             Form6 admin = new Form6();
-            admin.Show();
-            admin.FormClosing += (obj, args) => { this.Close(); };
-            this.Hide();
+            admin.ShowDialog();
         }
     }
 }
